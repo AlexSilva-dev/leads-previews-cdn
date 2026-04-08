@@ -18,4 +18,5 @@ services:
     environment:
       - USER_ID=1000
       - GROUP_ID=1000
+      - SSH_PASSWORD=${SSH_PASSWORD:-password}
     restart: always
