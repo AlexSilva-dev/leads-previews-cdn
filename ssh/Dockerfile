@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk add --no-cache openssh-server bash
+RUN apk add --no-cache openssh-server bash vim nano
 
 # Configure SSH
 RUN ssh-keygen -A

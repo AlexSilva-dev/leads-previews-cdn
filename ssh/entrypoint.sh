@@ -7,7 +7,7 @@ fi
 
 # Ensure /app exists and has correct permissions
 mkdir -p /app
-chown sshuser:sshuser /app
+chown -R sshuser:sshuser /app
 
 # Run sshd in foreground
 /usr/sbin/sshd -D -e
