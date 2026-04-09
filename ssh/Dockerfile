@@ -9,7 +9,7 @@ RUN ssh-keygen -A
 ARG USER_ID=1000
 ARG GROUP_ID=1000
 RUN addgroup -g ${GROUP_ID} sshuser && \
-    adduser -D -u ${USER_ID} -G sshuser -s /bin/bash sshuser && \
+    adduser -D -u ${USER_ID} -G sshuser -h /app -s /bin/bash sshuser && \
     echo "sshuser:password" | chpasswd
 
 # Configure SSH daemon
