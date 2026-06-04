@@ -1,6 +1,8 @@
 FROM alpine:latest
 
-RUN apk add --no-cache openssh-server bash vim nano
+RUN apk add --no-cache openssh-server bash vim nano nodejs npm && \
+    npm i -g @opencode-ai/cli && \
+    npm cache clean --force
 
 # Configure SSH
 RUN ssh-keygen -A

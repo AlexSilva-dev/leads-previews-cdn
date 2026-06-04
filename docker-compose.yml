@@ -16,6 +16,7 @@ services:
       - "2222:22"
     volumes:
       - ./app:/app
+      - .:/opencode-config:ro
     environment:
       - USER_ID=1000
       - GROUP_ID=1000
