@@ -9,6 +9,7 @@ services:
 
   ssh:
     image: ghcr.io/alexsilva-dev/leads-previews-cdn/ssh-server:latest
+    pull_policy: always
     ports:
       - "2222:22"
     volumes:
