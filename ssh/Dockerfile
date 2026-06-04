@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 RUN apk add --no-cache openssh-server bash vim nano nodejs npm && \
-    npm i -g @opencode-ai/cli && \
+    npm i -g opencode-ai@latest && \
     npm cache clean --force
 
 # Configure SSH
